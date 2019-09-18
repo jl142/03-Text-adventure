@@ -1,0 +1,162 @@
+
+{
+    "verbs":[
+        {
+            "v":"EXITS",
+            "map":"EXITS"
+        },
+        {
+            "v":"QUIT",
+            "map":"QUIT"
+        },
+        {
+            "v":"FIND",
+            "map":"FIND"
+        },
+        {
+            "v":"BOX",
+            "map":"BOX"
+        },
+        {
+            "v":"EAT",
+            "map":"EAT"
+        },
+        {
+            "v":"KEY",
+            "map":"END"
+        }
+    ],
+    "rooms":{
+        "START":{
+            "name":"Candy",
+            "desc":"You are trying to finding all the missing candies in the Sweet Garden .",
+            "exits":[
+                {
+                    "verb":"Find",
+                    "target":"fruit drops",
+                    "condition":""
+                },
+                {
+                    "verb":"BOX",
+                    "target":"CHOCOLATE",
+                    "condition":""
+                },
+                {
+                    "verb":"EAT",
+                    "target":"MARSHMALLOW",
+                    "condition":""
+                },
+                {
+                    "verb":"NOTHING",
+                    "target":"END",
+                    "condition":""
+                }
+            ],
+            "inventory":[
+
+            ]
+        },
+        "Fruit drops":{
+            "name":"Candies",
+            "desc":"You find a fruit drop, it can help you maintain strength.",
+            "exits":[
+                {
+                    "verb":"FIND",
+                    "target":"Fruit drops",
+                    "condition":""
+                },
+                {
+                    "verb":"BOX",
+                    "target":"CHOCOLATE",
+                    "condition":""
+                },
+                {
+                    "verb":"EAT",
+                    "target":"MARSHMALLOW",
+                    "condition":""
+                },
+                {
+                    "verb":"NOTHING",
+                    "target":"END",
+                    "condition":""
+                }
+            ],
+            "inventory":[
+
+            ]
+        },
+        "CHOCOLATE":{
+            "name":"Candy",
+            "desc":"You see a box in the other side of the Sweet Garden, when you open that box found that there is a bar of chocolate in it then you find a map to the location of Marshmallow.",
+            "exits":[
+                {
+                    "verb":"Find",
+                    "target":"Fruit drops",
+                    "condition":""
+                },
+                {
+                    "verb":"BOX",
+                    "target":"CHOCOLATE",
+                    "condition":""
+                },
+                {
+                    "verb":"EAT",
+                    "target":"MARSHMALLOW",
+                    "condition":""
+                }
+            ],
+            "inventory":[
+
+            ]
+        },
+        "MARSHMALLOW":{
+            "name":"Candy",
+            "desc":"You follow the map and arrive at the location of Marshmallow.It seems like you collected 3 kinds of candy so far.",
+            "exits":[
+                {
+                    "verb":"FIND",
+                    "target":"Fruit drops",
+                    "condition":""
+                },
+                {
+                    "verb":"BOX",
+                    "target":"CHOCOLATE",
+                    "condition":""
+                },
+                {
+                    "verb":"EAT",
+                    "target":"MARSHMALLOW",
+                    "condition":""
+                },
+                {
+                    "verb":"KEY",
+                    "target":"END",
+                    "condition":""
+                }
+            ],
+            "inventory":[
+
+            ]
+        },
+        "KEY":{
+            "name":"center of the sweet garden",
+            "desc":"You already collect 3 kinds of the main candies in the sweet garden.Congratulation！.",
+            "exits":[
+
+            ],
+            "inventory":[
+
+            ]
+        },
+        "END":{
+            "name":"Sweet Garden Owner",
+            "desc":"Due to your collection of the candies, before you leave the garden, you get the key to the garden, you become the owner of sweet garden.",
+            "exits":[
+
+            ],
+            "inventory":[
+
+            ]
+        }
+    }
+}
